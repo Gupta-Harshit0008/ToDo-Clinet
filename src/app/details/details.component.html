@@ -1,0 +1,30 @@
+<!-- pendng for view more details page -->
+
+<div class="container mt-3">
+<!-- for some basic overview of this page -->
+<button class="btn btn-success" (mouseover)="showDta()" (mouseout)="hideData()" >Hii, hover over me</button>
+<!-- here need to give a overview in proper mannner still pending -->
+<p *ngIf="showData"> hii thanks for hovering</p> 
+  
+</div>
+<div class="container text-center mt-3">
+  <div class="card" style="width: 100%;">
+    <div class="card-body">
+      <button class="btn" type="button" (click)="toggleButton()" *ngFor="let d of data">
+      <h5 class="card-title text-success"> Task Title :- {{d.title}}</h5></button>
+      <div *ngIf="clicked">
+      <div *ngFor="let d of data" >
+      <h6 class="card-subtitle mb-2 text-muted">createdOn: {{d.createdOn|date}}</h6>
+      <h6 class="card-subtitle mb-2 text-muted">Detailed discreption</h6>
+      <p class="card-text text-muted"> {{d.desc}}</p>
+      <button class="btn btn-warning m-1" >Update</button>
+      <div>
+      <button class="btn btn-danger m-1" (mouseover)="DeleteWarningShow()" (mouseout)="DeleteWarningHide()" (click)="DeleteTask()">Delete</button>
+      <p *ngIf="showDeleteWarning">This will delete the Task, kind hit this button if you wish to delete This Task</p>
+    </div>
+    </div>
+  </div>
+    </div>
+  </div>
+</div>
+

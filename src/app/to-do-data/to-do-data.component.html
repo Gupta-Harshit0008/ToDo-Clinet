@@ -1,0 +1,21 @@
+<div class="container mt-5">
+
+    <h5 class="text-center text-danger">
+        Todo Task List
+    </h5>
+
+    <div *ngFor="let d of data" class="card border-success mb-3 text-center"  style="max-width: 100%;">
+        <!-- <h3> title : {{d.title}} </h3>
+        <h3> desc : {{d.desc}} </h3>
+         -->
+            <div class="card-header bg-transparent border-success "><b> Task No.</b> </div>
+            <div class="card-body text-success">
+                
+              <h5 class="card-title">Task title: {{d.title}} </h5>
+              <b class="card-text">Task Desc: {{d.desc}}</b>
+            </div>
+            <div class="card-footer bg-transparent border-success">
+              <a [routerLink]="['/taskDetails',d._id]" class="btn btn-warning" > More Actions </a>  
+            </div>
+          </div>
+    </div>
