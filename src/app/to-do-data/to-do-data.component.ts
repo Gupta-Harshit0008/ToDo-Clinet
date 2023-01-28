@@ -7,11 +7,9 @@ import { AppdataService } from '../appdata.service';
   styleUrls: ['./to-do-data.component.css']
 })
 export class ToDoDataComponent implements OnInit {
-  data=[{
-    title:'Demo Title 1',
-    desc:'Demo Desc. 1',
-    id:'45454848451'
-  }] as any;
+  data=[] as any;
+
+  filteredString:string='';
   constructor(private _appdata:AppdataService) { }
 
   ngOnInit(): void {

@@ -4,7 +4,13 @@
         Todo Task List
     </h5>
 
-    <div *ngFor="let d of data" class="card border-success mb-3 text-center"  style="max-width: 100%;">
+    <div class="row mb-3">
+      <div class="col-md-12">
+        Search : <input type="text" placeholder="search here based upon task name or task Id" class="form-control" [(ngModel)]="filteredString">
+      </div>
+    </div>
+
+    <div *ngFor="let d of data | search:filteredString " class="card border-success mb-3 text-center"  style="max-width: 100%;">
         <!-- <h3> title : {{d.title}} </h3>
         <h3> desc : {{d.desc}} </h3>
          -->

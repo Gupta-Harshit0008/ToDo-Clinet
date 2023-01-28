@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { AppdataService } from '../appdata.service';
 
 @Component({
@@ -15,7 +15,8 @@ export class DetailsComponent implements OnInit {
    title!:string;
    desc!:string
   constructor(private activatedRoute:ActivatedRoute,
-    private _appdata:AppdataService) { }
+    private _appdata:AppdataService,
+    private router:Router) { }
 
   ngOnInit(): void {
     this.activatedRoute.paramMap.subscribe(param=>{
@@ -38,6 +39,7 @@ export class DetailsComponent implements OnInit {
       })
     
     })
+    this.router.navigate(['Home']);
 
   }
 

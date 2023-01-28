@@ -24,4 +24,9 @@ fetchDataById(id: any){
 deleteTask(id:any){
   return this.http.delete('http://localhost:1023/DeleteTask/'+id);
 }
+
+// API for updating task using Id
+UpdateTask(id:any,data={}){
+  return this.http.put(`http://localhost:1023/UpdateTask/${id}`,data);
+}
 }

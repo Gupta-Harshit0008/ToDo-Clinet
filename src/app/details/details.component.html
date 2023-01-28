@@ -15,9 +15,10 @@
       <div *ngIf="clicked">
       <div *ngFor="let d of data" >
       <h6 class="card-subtitle mb-2 text-muted">createdOn: {{d.createdOn|date}}</h6>
+      <h6 class="card-subtitle mb-2 text-muted">UpdatedOn: {{d.UpdatedOn|date}}</h6>
       <h6 class="card-subtitle mb-2 text-muted">Detailed discreption</h6>
       <p class="card-text text-muted"> {{d.desc}}</p>
-      <button class="btn btn-warning m-1" >Update</button>
+      <button class="btn btn-warning m-1" [routerLink]="['/updateTask',d._id]" >Update</button>
       <div>
       <button class="btn btn-danger m-1" (mouseover)="DeleteWarningShow()" (mouseout)="DeleteWarningHide()" (click)="DeleteTask()">Delete</button>
       <p *ngIf="showDeleteWarning">This will delete the Task, kind hit this button if you wish to delete This Task</p>

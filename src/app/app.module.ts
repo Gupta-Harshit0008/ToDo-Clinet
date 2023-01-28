@@ -12,6 +12,8 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { NoPageComponent } from './no-page/no-page.component';
 import { DetailsComponent } from './details/details.component';
+import { SearchPipe } from './Pipes/search.pipe';
+import { UpdateComponent } from './update/update.component';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { DetailsComponent } from './details/details.component';
     AboutAuthorComponent,
     HomeComponent,
     NoPageComponent,
-    DetailsComponent
+    DetailsComponent,
+    SearchPipe,
+    UpdateComponent
   ],
   imports: [
     BrowserModule,
